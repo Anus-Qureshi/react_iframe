@@ -31,7 +31,8 @@ jobs:
       uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install # it will run 'install yarn' in terminal
-    
+    - name: solve
+      run: sudo npm install -g --unsafe-perm=true --allow-root
     - name: build react App
       run: yarn build
         
